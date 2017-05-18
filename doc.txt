@@ -1,0 +1,4 @@
+https://dev.stg.legal-cloud.net/Citrix/StoreWeb/
+
+user:tma4
+pass:R37Tj#4Z
