@@ -2,3 +2,5 @@ https://dev.stg.legal-cloud.net/Citrix/StoreWeb/
 
 user:tma4
 pass:R37Tj#4Z
+
+\\172.20.2.130\share_folder\Training\TestCase
