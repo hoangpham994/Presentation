@@ -20,3 +20,8 @@ Call the MailMessage class FromMailMessage method which accepts object of the Ma
 Call the MapiMessage.Save() method to save the MSG file.
 Write the following code in the click event of the button control of the Windows application.
 
+In the example above, we created a simple MSG file. Aspose.Email also supports saving message files with attachments. All you need to do is to add the attachments to the MailMessage instance. Add attachments by calling the Add() method on the MailMessage.Attachments collection. Add a listbox to the form created above and add two buttons, one each for adding and removing attachments. The application that adds applications works like this:
+When the Add Attachment button is clicked, an Open File Dialog is displayed to help users browse and select the attachment.
+When a file has been selected, the full path is added to a list.
+When the MSG file is created, the attachment paths are grabbed from the list and added to the MailMessage.Attachments collection.
+Write the following code in the Add Attachment button's click event.
