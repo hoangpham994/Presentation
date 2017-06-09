@@ -14,3 +14,9 @@ Create an instance of the SmtpClient class and send the email using the Send met
 
 The code sample below shows how multiple To, CC and BCC addresses can be specified.
 
+The MailMessage class has the Save() method that can save Outlook MSG files to disk or stream. The code snippets below create an instance of the MailMessage class, set properties like from, to, subject and body. The Save() method takes the file name as an argument. In addition, the Outlook Messages can be created with a compressed RTF body using the MapiConversionOptions. To set up, create a new Windows application and add a reference to the Aspose.Email dll into the project.
+Create a new instance of the MailMessage class and set the From, To, Subject and Body properties.
+Call the MailMessage class FromMailMessage method which accepts object of the MailMessage type. The FromMailMessage() method converts the MailMessage into a MailMessage (MSG).
+Call the MapiMessage.Save() method to save the MSG file.
+Write the following code in the click event of the button control of the Windows application.
+
