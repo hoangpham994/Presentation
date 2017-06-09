@@ -25,3 +25,5 @@ When the Add Attachment button is clicked, an Open File Dialog is displayed to h
 When a file has been selected, the full path is added to a list.
 When the MSG file is created, the attachment paths are grabbed from the list and added to the MailMessage.Attachments collection.
 Write the following code in the Add Attachment button's click event.
+
+When the Remove Attachment button is clicked, remove the selected items from the listbox. Write the following code in the Remove Attachment button's click event.
