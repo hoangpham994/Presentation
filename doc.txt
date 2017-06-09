@@ -6,3 +6,8 @@ pass:R37Tj#4Z
 \\172.20.2.130\share_folder\Training\TestCase
 
 The following code snippet shows you how to create a new email with different properties.
+
+To specify multiple email addresses in an email message, follow these steps:
+Create an instance of the MailMessage class.
+Specify the From and multiple To, Cc and Bcc addresses using the MailMessage instance.
+Create an instance of the SmtpClient class and send the email using the Send method.
