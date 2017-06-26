@@ -1,5 +1,7 @@
 https://dev.stg.legal-cloud.net/Citrix/StoreWeb/
 
+pvhoang VoTranh@123
+
 user:tma4
 pass:R37Tj#4Z
 
