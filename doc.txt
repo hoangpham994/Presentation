@@ -33,3 +33,6 @@ Write the following code in the Add Attachment button's click event.
 When the Remove Attachment button is clicked, remove the selected items from the listbox. Write the following code in the Remove Attachment button's click event.
 
 TestCase : http://172.16.1.221/svnrep/lit_i_view/trunk/document/document_format
+
+hphamvan99994@yahoo.com
+VoTranh@123
