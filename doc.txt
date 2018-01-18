@@ -1,4 +1,12 @@
 
+- Bên bạn tuyển web làm PHP, C#, Java hay ngôn ngữ nào?
+- Sử dụng framework gì?
+- Sử dụng angular, ReactJS hay thứ gì đó cần?
+- Database gì?
+- Server gì?
+- Cần kinh nghiệm làm việc bao nhiu năm?
+
+
 https://vozforums.com/showthread.php?t=6790033&page=3
 
 
