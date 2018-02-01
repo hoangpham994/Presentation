@@ -1,3 +1,22 @@
+            //MailMessage mail = new MailMessage();
+            //mail.To.Add("hoang.phamvan994@gmail.com");
+            //mail.From = new MailAddress("zingzing995@gmail.com");
+            //mail.Subject = "This is a test email from C# script";
+            //mail.Body = "This is a test email from C# script";
+
+            //mail.IsBodyHtml = true;
+            //SmtpClient smtp = new SmtpClient();
+            //smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+            //smtp.Credentials = new System.Net.NetworkCredential
+            //     ("zingzing995@gmail.com", "vanhoang123"); // ***use valid credentials***
+            //smtp.Port = 587;
+            //smtp.UseDefaultCredentials = false;
+            //smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
+            ////Or your Smtp Email ID and Password
+            //smtp.EnableSsl = true;
+            //smtp.Send(mail);
+
+
 
 - Bên bạn tuyển web làm PHP, C#, Java hay ngôn ngữ nào?
 - Sử dụng framework gì?
