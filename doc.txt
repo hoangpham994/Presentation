@@ -16,6 +16,7 @@
             //smtp.EnableSsl = true;
             //smtp.Send(mail);
 
+In many cases, we must insert or update multi record in sage so what is result of process if one or a few record failure.
 
 
 - Bên bạn tuyển web làm PHP, C#, Java hay ngôn ngữ nào?
