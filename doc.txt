@@ -1,4 +1,19 @@
-            //MailMessage mail = new MailMessage();
+        /// <summary> Displays exception information to the console. </summary>
+        /// <param name="ex">The exception to output</param>
+        private static void DisplayException(Exception ex)
+        {
+            Console.WriteLine("The application terminated with an error.");
+            Console.WriteLine(ex.Message);
+            while (ex.InnerException != null)
+            {
+                Console.WriteLine("\t* {0}", ex.InnerException.Message);
+                ex = ex.InnerException;
+            }
+        }
+           
+           
+           
+           //MailMessage mail = new MailMessage();
             //mail.To.Add("hoang.phamvan994@gmail.com");
             //mail.From = new MailAddress("zingzing995@gmail.com");
             //mail.Subject = "This is a test email from C# script";
