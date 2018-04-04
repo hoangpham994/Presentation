@@ -11,6 +11,13 @@
             }
         }
            
+           USE BQInt
+ALTER TABLE Contacts ADD ID_CRM_ENTITY_GUID [nvarchar](60) NULL
+GO
+UPDATE Contacts SET ID_CRM_ENTITY_GUID = ''
+GO
+ALTER TABLE Contacts ALTER COLUMN ID_CRM_ENTITY_GUID [nvarchar](60) NOT NULL
+GO
            
            
            //MailMessage mail = new MailMessage();
