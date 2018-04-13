@@ -42,11 +42,48 @@ BEGIN
 		Select @IDGRP = IDGRP, @IDNATACCT = IDNATACCT, @CRM_PERSON_ID = CRM_PERSON_ID, @Modules = MODULE, @Companies = CODE_COMPAGNIE, @Statut = Statut, @GroupTax = CODETAXGRP
 		From Contacts Where Id = @ContactID
 		
-		IF @Statut <> 1 or IF @Statut <> 0
+		IF @Statut <> 1 and @Statut <> 0
 		BEGIN
-			UPDATE  Contacts
-			SET IDGRP = 'MEMBRE'
-			Where Id = @ContactID
+			ROLLBACK TRANSACTION;
+								Select -1 AS ErrorNumber, 'Statut must be 1 or 1' AS ErrorMessage
+
+								UPDATE Contacts
+								SET Status = 'Error'
+									,ErrorLog = 'Statut must be 1 or 1'
+									,JSON_TO_SEND = REPLACE (@JsonString,'}', ',"STATUS":"Error","ERRORLOG":"Statut must be 1 or 1"}')
+								WHERE Id = @ContactID
+								RETURN
+		END
+		
+		IF UPPER(RTRIM(LTRIM(@IDGRP))) <> 'M' and UPPER(RTRIM(LTRIM(@IDGRP))) <> 'P'
+		BEGIN
+			ROLLBACK TRANSACTION;
+								Select -1 AS ErrorNumber, 'CodeGroupe must be M or P' AS ErrorMessage
+
+								UPDATE Contacts
+								SET Status = 'Error'
+									,ErrorLog = 'CodeGroupe must be M or P'
+									,JSON_TO_SEND = REPLACE (@JsonString,'}', ',"STATUS":"Error","ERRORLOG":"CodeGroupe must be M or P"}')
+								WHERE Id = @ContactID
+								RETURN
+		END
+		
+		SET @GroupTax = UPPER(RTRIM(LTRIM(@GroupTax)))
+		
+		IF @GroupTax <> 'ALBERTA' and @GroupTax = 'CB' and @GroupTax <> 'EXEMPT' and @GroupTax = 'HORS-CAN' 
+		and @GroupTax = 'IPE' and @GroupTax <> 'MANITOBA' and @GroupTax = 'NB'
+		and @GroupTax = 'NE' and @GroupTax <> 'ONTARIO' and @GroupTax = 'QUEBEC'
+		and @GroupTax = 'SAS' and @GroupTax <> 'TNL' and @GroupTax = 'ROC'
+		BEGIN
+			ROLLBACK TRANSACTION;
+								Select -1 AS ErrorNumber, 'GroupTax is not valid' AS ErrorMessage
+
+								UPDATE Contacts
+								SET Status = 'Error'
+									,ErrorLog = 'GroupTax is not valid'
+									,JSON_TO_SEND = REPLACE (@JsonString,'}', ',"STATUS":"Error","ERRORLOG":"GroupTax is not valid"}')
+								WHERE Id = @ContactID
+								RETURN
 		END
 		
 		SET @ListCompany = @Companies + ','
