@@ -2,7 +2,7 @@ Must play
 
 1 NieR Automata 
         
-        
+        HCMC University of Technology and Education   Bachelor of Software Engineering Software Engineering 
         
         /// <summary> Displays exception information to the console. </summary>
         /// <param name="ex">The exception to output</param>
